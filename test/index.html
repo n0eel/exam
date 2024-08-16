@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="promo-banner">
+        Скидка 10% по промокоду "ZAMOK" на все заказы до 10.09
+      </div>
+      <div class="contact-info">
+        <div class="logo">
+          <img src="./imgs/Logo.svg" alt="" />
+          <nav>
+            <li><a href="">Главная</a></li>
+            <li><a href="">Каталог</a></li>
+            <li><a href="">Оптовая продажа</a></li>
+            <li><a href="">О нас</a></li>
+          </nav>
+        </div>
+        <div class="contacts">
+          <img src="./imgs/phone-call 1.svg" alt="" />
+          <span>+7 (966) 55 88 499</span>
+          <a href="">Обратный звонок</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="breadcrumb">
+        <p>Главная /</p>
+        <p class="catalog">Каталог</p>
+      </div>
+      <h1 class="electronic-items">Накладные электронные замки</h1>
+      <div class="filter-sort-container">
+        <div class="categories">
+          <div class="reload-filter">
+            <p>Сбросить фильтры</p>
+          </div>
+          <div class="category-filter">
+            <select id="category" onclick="filterCategory()">
+              <option value="popularity">Популярности</option>
+              <option value="priceFromUp">
+                Цене - с самого дорогого
+              </option>
+              <option value="priceFromDown">
+                Цене - с самого дешевого
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="filter">
+          <h2>Фильтр</h2>
+          <div class="price-filter">
+            <p for="price" id="price">Цена</p>
+            <div class="price-input">
+              <input type="number" id="min-price"/>
+              <input type="number" id="max-price"/>
+            </div>
+          </div>
+          <div class="other-filters">
+            <select>
+              <option value="peculiarities">Особенности</option>
+            </select>
+            <hr />
+            <select>
+              <option value="color">Цвет</option>
+            </select>
+            <hr />
+            <select>
+              <option value="material">Материал</option>
+            </select>
+            <hr />
+            <select>
+              <option value="size">Размеры</option>
+            </select>
+            <hr />
+          </div>
+        </div>
+        <div id="product-wrapper"></div>
+
+        
+        <div class="products">
+  
+
+          <template id="template">
+            <div class="product-list">
+              <div class="product-card">
+                <div class="main-info">
+                  <div class="status">
+                    <span><i class="fa-solid fa-xmark x-work"></i></span>
+                    <span class="out-of-stock">Нет в наличии</span>
+                    <span class="sale">SALE</span>
+                  </div>
+                  <div class="gift">
+                    <img src="./imgs/gift 1.svg" alt="" class="gift-img" />
+                    <span class="prize">Подарок</span>
+                  </div>
+                  <div class="image">
+                    <img
+                      src="./imgs/Rectangle 19.png"
+                      alt="Вариативный замок Golden Soft для отеля"
+                      class="product-img"
+                    />
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="no star">★</span>
+                    <span class="no star">★</span>
+                    <span class="reviews">(12 отзывов)</span>
+                  </div>
+                  <p class="title">Вариативный замок Golden Soft для отеля</p>
+                  <div class="price">
+                    <span class="new-price">7 000₽</span>
+                    <span class="old-price">8 000₽</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <section>
+        <div class="recent">
+            <div class="swiper">
+                <h1>Вы недавно просмотрели</h1>
+                <div>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="recent-products">
+                <div class="product-list">
+                    <div class="product-card">
+                        <div class="main-info">
+                        <div class="status">
+                            <span><i class="fa-solid fa-xmark x-work"></i></span>
+                            <span class="out-of-stock">Нет в наличии</span>
+                            <span class="sale">SALE</span>
+                        </div>
+                        <div class="gift">
+                            <img src="./imgs/gift 1.svg" alt="" class="gift-img">
+                            <span class="prize">Подарок</span>
+                        </div>
+                        <div class="image">
+                            <img src="./imgs/Rectangle 19.png" alt="Вариативный замок Golden Soft для отеля" class="product-img">
+                        </div>
+                    </div>
+                        <div class="description">
+                        <p   class="title">Вариативный замок Golden Soft для отеля</p >
+                        <div class="price">
+                            <span class="new-price">7 000₽</span>
+                            <span class="old-price">8 000₽</span>
+                        </div>
+                    </div>
+                    </div>
+        
+                </div>
+
+                <div class="product-list">
+                    <div class="product-card">
+                        <div class="main-info">
+                        <div class="status">
+                            <span><i class="fa-solid fa-xmark x-work"></i></span>
+                            <span class="out-of-stock">Нет в наличии</span>
+                            <span class="sale">SALE</span>
+                        </div>
+                        <div class="gift">
+                            <img src="./imgs/gift 1.svg" alt="" class="gift-img">
+                            <span class="prize">Подарок</span>
+                        </div>
+                        <div class="image">
+                            <img src="./imgs/Rectangle 3.png" alt="Вариативный замок Golden Soft для отеля" class="product-img">
+                        </div>
+                    </div>
+                        <div class="description">
+                        <p   class="title">Вариативный замок Golden Soft для отеля</p >
+                        <div class="price">
+                            <span class="new-price">7 000₽</span>
+                            <span class="old-price">8 000₽</span>
+                        </div>
+                    </div>
+                    </div>
+        
+                </div>
+
+                <div class="product-list">
+                    <div class="product-card">
+                        <div class="main-info">
+                        <div class="status">
+                            <span><i class="fa-solid fa-xmark x-work"></i></span>
+                            <span class="out-of-stock">Нет в наличии</span>
+                            <span class="sale">SALE</span>
+                        </div>
+                        <div class="gift">
+                            <img src="./imgs/gift 1.svg" alt="" class="gift-img">
+                            <span class="prize">Подарок</span>
+                        </div>
+                        <div class="image">
+                            <img src="./imgs/Rectangle 2.png" alt="Вариативный замок Golden Soft для отеля" class="product-img">
+                        </div>
+                    </div>
+                        <div class="description">
+                        <p   class="title">Вариативный замок Golden Soft для отеля</p >
+                        <div class="price">
+                            <span class="new-price">7 000₽</span>
+                            <span class="old-price">8 000₽</span>
+                        </div>
+                    </div>
+                    </div>
+        
+                </div>
+
+                <div class="product-list">
+                    <div class="product-card">
+                        <div class="main-info">
+                        <div class="status">
+                            <span><i class="fa-solid fa-xmark x-work"></i></span>
+                            <span class="out-of-stock">Нет в наличии</span>
+                            <span class="sale">SALE</span>
+                        </div>
+                        <div class="gift">
+                            <img src="./imgs/gift 1.svg" alt="" class="gift-img">
+                            <span class="prize">Подарок</span>
+                        </div>
+                        <div class="image">
+                            <img src="./imgs/Rectangle 14.png" alt="Вариативный замок Golden Soft для отеля" class="product-img">
+                        </div>
+                    </div>
+                        <div class="description">
+                        <p   class="title">Вариативный замок Golden Soft для отеля</p >
+                        <div class="price">
+                            <span class="new-price">7 000₽</span>
+                            <span class="old-price">8 000₽</span>
+                        </div>
+                    </div>
+                    </div>
+        
+                </div>
+
+                <div class="product-list">
+                    <div class="product-card">
+                        <div class="main-info">
+                        <div class="status">
+                            <span><i class="fa-solid fa-xmark x-work"></i></span>
+                            <span class="out-of-stock">Нет в наличии</span>
+                            <span class="sale">SALE</span>
+                        </div>
+                        <div class="gift">
+                            <img src="./imgs/gift 1.svg" alt="" class="gift-img">
+                            <span class="prize">Подарок</span>
+                        </div>
+                        <div class="image">
+                            <img src="./imgs/Rectangle 19.png" alt="Вариативный замок Golden Soft для отеля" class="product-img">
+                        </div>
+                    </div>
+                        <div class="description">
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="no star">★</span>
+                            <span class="no star">★</span>
+                            <span class="reviews">(12 отзывов)</span>
+                        </div>
+                        <p   class="title">Вариативный замок Golden Soft для отеля</p >
+                        <div class="price">
+                            <span class="new-price">7 000₽</span>
+                            <span class="old-price">8 000₽</span>
+                        </div>
+                    </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="info-wrapper" style="margin-bottom: 82px;">
+            <div class="product-description">
+                <h3 style="margin-bottom: 24px; font-size: 32px;">Eget quis quam metus, scelerisque.</h3>
+                <p style="margin-bottom: 24px;";">Odio felis sit leo, massa, mauris, at pulvinar ultrices. Eu porttitor molestie massa porttitor. Quisque at turpis ut proin eu et magna etiam rhoncus.</p>
+                <div class="equal-info" style="margin-bottom: 24px;">
+                    <div class="first-equal" style="display: flex; gap: 15px;">
+                    <img src="./imgs/Icon (1).svg" alt=""> <p>Межкомнатую дверь</p>
+                    <img src="./imgs/Icon (1).svg" alt=""> <p>Деревянную дверь</p>
+                </div>
+                <div class="second-equal" style="display: flex; gap: 15px;">
+                    <img src="./imgs/Icon (1).svg" alt=""> <p>Межкомнатую дверь</p>
+                    <img src="./imgs/Icon (1).svg" alt=""> <p>Деревянную дверь</p>
+                </div>
+                </div>
+                <p>Ac risus neque pulvinar tincidunt est. Tristique imperdiet viverra interdum in leo. Nullam ullamcorper id enim fermentum integer praesent bibendum. In ullamcorper purus scelerisque malesuada et egestas. Ac dictumst mauris sed facilisis.</p>
+            </div>
+            <div class="product-image">
+                <img src="./imgs/white-2-storey-house-near-trees-1115804.png" alt="">
+            </div>
+        </div>
+
+        <div class="info-wrapper">
+            <div class="product-image">
+                <img src="./imgs/blakc-2-storey-house-near-trees-1115804.png" alt="">
+            </div>
+            <div class="product-description">
+                <h3 style="margin-bottom: 24px; font-size: 32px;">Eget quis quam metus, scelerisque.</h3>
+                <p style="margin-bottom: 24px;";">Odio felis sit leo, massa, mauris, at pulvinar ultrices. Eu porttitor molestie massa porttitor. Quisque at turpis ut proin eu et magna etiam rhoncus.</p>
+                <p>Ac risus neque pulvinar tincidunt est. Tristique imperdiet viverra interdum in leo. Nullam ullamcorper id enim fermentum integer praesent bibendum. In ullamcorper purus scelerisque malesuada et egestas. Ac dictumst mauris sed facilisis.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <script src="./main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8eb3cc9398.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
